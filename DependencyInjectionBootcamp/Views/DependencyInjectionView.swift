@@ -28,6 +28,9 @@ struct DependencyInjectionView: View {
 
 struct DependencyInjection_Previews: PreviewProvider {
     /*
+     THIS IS THE START OF THE POSTSERVICE INJECTION
+    */
+    /*
         postService depencies should be initlized at the start of the app be and be passed around to needed components
         - Thhey will be injected into all the views or ViewModels that depend on them     */
     static let postService = PostService()

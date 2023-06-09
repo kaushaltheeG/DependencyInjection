@@ -14,7 +14,7 @@ import Combine
     2. Cause issues when using different threads and these threads are accessing the same instance
         a. causes the app to crash
     3. Can customize init
-    4. Cannot swap out services
+    4. Cannot swap out dependencies
  */
 
 class PostService {
