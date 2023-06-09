@@ -12,9 +12,9 @@ class DependencyViewModel: ObservableObject {
     
     @Published var dataArray: [PostModel] = []
     private var cancellables = Set<AnyCancellable>()
-    let postService: PostService
+    let postService: PostServiceProtocol
     
-    init(postService: PostService) { // <-- the dependencies required for the class
+    init(postService: PostServiceProtocol) { // <-- the dependencies required for the class
         self.postService = postService
         loadPosts()
     }
