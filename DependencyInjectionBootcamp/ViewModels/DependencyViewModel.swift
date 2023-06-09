@@ -6,16 +6,25 @@
 //
 
 import Foundation
+import Combine
 
 class DependencyViewModel: ObservableObject {
     
     @Published var dataArray: [PostModel] = []
-
-    init() {
+    private var cancellables = Set<AnyCancellable>()
+    let postService: PostService
+    
+    init(postService: PostService) { // <-- the dependencies required for the class
+        self.postService = postService
         loadPosts()
     }
     
     private func loadPosts() {
-        
+        postService.getData()
+            .sink(receiveCompletion: { _ in
+            }, receiveValue: { [weak self]  postsArray in
+                self?.dataArray = postsArray
+            })
+            .store(in: &cancellables)
     }
 }

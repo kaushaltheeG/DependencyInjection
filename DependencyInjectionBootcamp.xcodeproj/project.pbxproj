@@ -11,10 +11,10 @@
 		60EE4FE32A32B13E009C93CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE4FE22A32B13E009C93CD /* ContentView.swift */; };
 		60EE4FE52A32B140009C93CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60EE4FE42A32B140009C93CD /* Assets.xcassets */; };
 		60EE4FE82A32B140009C93CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60EE4FE72A32B140009C93CD /* Preview Assets.xcassets */; };
-		60EE4FEF2A32B157009C93CD /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE4FEE2A32B157009C93CD /* DependencyInjection.swift */; };
+		60EE4FEF2A32B157009C93CD /* DependencyInjectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE4FEE2A32B157009C93CD /* DependencyInjectionView.swift */; };
 		60EE4FF22A32B187009C93CD /* DependencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE4FF12A32B187009C93CD /* DependencyViewModel.swift */; };
 		60EE4FF52A32B214009C93CD /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE4FF42A32B214009C93CD /* PostModel.swift */; };
-		60EE4FF82A32B2EC009C93CD /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE4FF72A32B2EC009C93CD /* PostsService.swift */; };
+		60EE4FF82A32B2EC009C93CD /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE4FF72A32B2EC009C93CD /* PostService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,10 +23,10 @@
 		60EE4FE22A32B13E009C93CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		60EE4FE42A32B140009C93CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60EE4FE72A32B140009C93CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		60EE4FEE2A32B157009C93CD /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		60EE4FEE2A32B157009C93CD /* DependencyInjectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionView.swift; sourceTree = "<group>"; };
 		60EE4FF12A32B187009C93CD /* DependencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyViewModel.swift; sourceTree = "<group>"; };
 		60EE4FF42A32B214009C93CD /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
-		60EE4FF72A32B2EC009C93CD /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
+		60EE4FF72A32B2EC009C93CD /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +59,7 @@
 		60EE4FDF2A32B13E009C93CD /* DependencyInjectionBootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				60EE4FF92A32B711009C93CD /* Views */,
 				60EE4FF62A32B2AA009C93CD /* Services */,
 				60EE4FF32A32B207009C93CD /* Models */,
 				60EE4FF02A32B170009C93CD /* ViewModels */,
@@ -66,7 +67,6 @@
 				60EE4FE22A32B13E009C93CD /* ContentView.swift */,
 				60EE4FE42A32B140009C93CD /* Assets.xcassets */,
 				60EE4FE62A32B140009C93CD /* Preview Content */,
-				60EE4FEE2A32B157009C93CD /* DependencyInjection.swift */,
 			);
 			path = DependencyInjectionBootcamp;
 			sourceTree = "<group>";
@@ -98,9 +98,17 @@
 		60EE4FF62A32B2AA009C93CD /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				60EE4FF72A32B2EC009C93CD /* PostsService.swift */,
+				60EE4FF72A32B2EC009C93CD /* PostService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		60EE4FF92A32B711009C93CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				60EE4FEE2A32B157009C93CD /* DependencyInjectionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,10 +183,10 @@
 			files = (
 				60EE4FE32A32B13E009C93CD /* ContentView.swift in Sources */,
 				60EE4FE12A32B13E009C93CD /* DependencyInjectionBootcampApp.swift in Sources */,
-				60EE4FEF2A32B157009C93CD /* DependencyInjection.swift in Sources */,
+				60EE4FEF2A32B157009C93CD /* DependencyInjectionView.swift in Sources */,
 				60EE4FF22A32B187009C93CD /* DependencyViewModel.swift in Sources */,
 				60EE4FF52A32B214009C93CD /* PostModel.swift in Sources */,
-				60EE4FF82A32B2EC009C93CD /* PostsService.swift in Sources */,
+				60EE4FF82A32B2EC009C93CD /* PostService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
