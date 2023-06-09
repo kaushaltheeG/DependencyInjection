@@ -46,11 +46,15 @@ class PostService: PostServiceProtocol {
 
 class MockPostService: PostServiceProtocol {
     
-    let testData: [PostModel] = [
-        PostModel(userId: 1, id: 1, title: "Mock One", body: "mock one"),
-        PostModel(userId: 2, id: 2, title: "Mock Two", body: "mock two")
-    ]
+    let testData: [PostModel]
     
+    // can pass mock data or will be init with mock
+    init(data: [PostModel]?) {
+        self.testData = data ?? [
+            PostModel(userId: 1, id: 1, title: "Mock One", body: "mock one"),
+            PostModel(userId: 2, id: 2, title: "Mock Two", body: "mock two")
+        ]
+    }
     func getData() -> AnyPublisher<[PostModel], Error> {
         // single publisher that pushes a single output
         Just(testData) // Just never fails but out getDat expects a possble error

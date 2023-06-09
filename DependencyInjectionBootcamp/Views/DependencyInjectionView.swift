@@ -35,8 +35,9 @@ struct DependencyInjection_Previews: PreviewProvider {
         - They will be injected into all the views or ViewModels that depend on them     */
     // Production
     static let postService = PostService(url: URL(string: "https://jsonplaceholder.typicode.com/posts")!) // should never unwrap in production app
+    
     // Mock service
-    static let mockPostService = MockPostService()
+    static let mockPostService = MockPostService(data: nil)
     static var previews: some View {
         DependencyInjectionView(postService: mockPostService)
     }
